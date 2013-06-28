@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>GroundSource</title>
+		<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" href="css/melody.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+		<script src="js/groundsource.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/vgi4bct.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script>
+		</script>
+	</head>
+
+	<body>
+		<section class="headerHolder">
+			<header>
+				<h1>GroundSource</h1>
+				<h4>Eugene McCarthy <a href="#">Log out</a></h4>
+				<ul class="nav">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#" class="active">Campaigns</a></li>
+					<li><a href="#">People</a></li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</header>
+		</section>
+
+		<section class="main">
+			<div class="mainTop breadcrumb">
+				<h2>mWater Tanzania Water Project</h2>
+				<ol class="crumbs">
+					<li><a href="#">Basic info</a></li>
+					<li><a href="#" class="active">Build your list</a></li>
+					<li><a href="#">Create your survey</a></li>
+					<li><a href="#">Review</a></li>
+				</ol>
+			</div>
+
+			<form class="campaignCreator step1">
+				<header>
+					<h2>Step 1. Build Your List</h2>
+					<button type="button">Save &amp; Close</button>
+				</header>
+
+				<div class="fieldRow">
+					<div class="grid 1of3">
+						<label class="req">Regular text input</label>
+						<p class="caption">This is a form field caption.</p>
+					</div>
+					<div class="grid 2of3"><input type="text" name="title" placeholder="Required" /></div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 1of3">
+						<label class="req">Dropdown menu</label>
+						<p class="caption">Add the .rec class to a label to show the asterisk.</p>
+					</div>
+					<div class="grid 2of3">
+						<!--
+						<select multiple>
+							<option data-greedy="true" data-caption="Test this screener on yourself first">Only me</option>
+							<option data-greedy="true" data-caption="All 7,589 sources">Everyone</option>
+							<optgroup label="Your Lists">
+								<option data-caption="4,331 sources" data-sources="4331">Minneapolis</option>
+								<option data-caption="3,258 sources" data-sources="3258">St. Paul</option>
+							</optgroup>
+						</select>
+						<div class="dropdown sourceCircles">
+							<div class="dropdownInner">
+								<span class="selectedLabel">Only me</span>
+								<i class="selectedLabel">Test this screener on yourself first</i>
+							</div>
+							<ul class="options">
+								<li data-metaoption="self" class="selected">Only me <i>Test this screener on yourself first</i></li>
+								<li data-metaoption="everyone">Everyone <i>7,589 people</i></li>
+								<li class="group">Your Lists</li>
+								<li data-sources="4331"><input type="checkbox" name="minn" id="minn" /> Minneapolis <i>4,331 people</i></li>
+								<li data-sources="3258"><input type="checkbox" name="stp" id="stp" /> St. Paul <i>3,258 people</i></li>
+							</ul>
+						</div>
+						-->
+
+						<select>
+							<optgroup label="Fruits">
+								<option>Apples</option>
+								<option>Oranges</option>
+								<option selected="selected">Strawberries</option>
+							</optgroup>
+							<optgroup label="Vegetables">
+								<option>Spinach</option>
+								<option>Cucumbers</option>
+								<option>Bell Peppers</option>
+							</optgroup>
+						</select>
+					</div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 1of3">
+						<label>Text area</label>
+						<p class="caption">Quisque ipsum nibh, ullamcorper eget, pulvinar sed, posuere vitae, nulla.</p>
+					</div>
+					<div class="grid 2of3"><textarea name="title" placeholder="Optional"></textarea></div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 1of3">
+						<label>Toggles, Checks &amp; Radios</label>
+						<p class="caption">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+					</div>
+					<div class="grid 2of3 subgrid">
+						<div class="grid 1of3">
+							<input class="toggle" type="checkbox" name="toggle1" id="toggle1" checked />
+							<label for="toggle1">First option</label>
+							<br />
+							<input class="toggle" type="checkbox" name="toggle2" id="toggle2" />
+							<label for="toggle2">Second option</label>
+						</div>
+						<div class="grid 1of3">
+							<input type="checkbox" name="check1" id="check1" checked />
+							<label for="check1">First option</label>
+							<br />
+							<input type="checkbox" name="check2" id="check2" />
+							<label for="check2">Second option</label>
+						</div>
+						<div class="grid 1of3">
+							<input type="radio" name="check" id="radio1" checked />
+							<label for="radio1">First option</label>
+							<br />
+							<input type="radio" name="check" id="radio2" />
+							<label for="radio2">First option</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 1of3">
+						<label>Buttons</label>
+						<p class="caption">Suspendisse id velit vitae ligula volutpat condimentum.</p>
+					</div>
+					<div class="grid 2of3">
+						<div>
+							<button type="button">Button</button>
+							<button type="button" class="red">.red</button>
+							<button type="button" class="blue">.blue</button>
+							<button type="button" class="green">.green</button>
+							<button type="button" class="purple">.purple</button>
+						</div>
+						<div>
+							<button type="button" class="">Button</button>
+							<button type="button" class="smaller">.smaller</button>
+							<button type="button" class="smallest">.smallest</button>
+						</div>
+						<div>
+							<button type="button" class="">Button</button>
+							<button type="button" class="bigger">.bigger</button>
+							<button type="button" class="biggest">.biggest</button>
+						</div>
+					</div>
+				</div>
+
+				<footer>
+					Previous step
+					<button type="button" class="blue">Looks good! Next step</button>
+				</footer>
+			</form>
+		</section>
+
+		<section class="footerHolder">
+			<footer>
+			</footer>
+		</section>
+	</body>
+</html>
