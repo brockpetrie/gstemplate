@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>GroundSource</title>
+		<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/melody.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.tag-it.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+		<script type="text/javascript" src='js/jquery-ui-1.10.3.custom.min.js'></script>
+		<script type="text/javascript" src='js/jquery.tag-it.js'></script>
+		<script type="text/javascript" src='js/jquery.autosize.min.js'></script>
+		<script type="text/javascript" src="js/groundsource.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/vgi4bct.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script>
+			$(function(){
+				$('.taglist').tagit({ placeholderText: 'Optional' });
+				$('textarea:not(.questionText)').autosize({append: '\n'});
+			});
+		</script>
+	</head>
+
+	<body>
+		<section class="headerHolder">
+			<header>
+				<h1>GroundSource</h1>
+				<h4>Eugene McCarthy <a href="#">Log out</a></h4>
+				<ul class="nav">
+					<li><a href="#">Dashboard</a></li>
+					<li><a href="#" class="active">Campaigns</a></li>
+					<li><a href="#">People</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</header>
+		</section>
+
+		<section class="main">
+			<div class="mainTop breadcrumb">
+				<h2>Minneapolis Storm Damage</h2>
+				<ol class="crumbs">
+					<li><a href="#">Basic info</a></li>
+					<li><a href="#">Build your list</a></li>
+					<li><a href="#" class="active">Craft your message</a></li>
+					<li><a href="#">Review</a></li>
+				</ol>
+			</div>
+
+			<form class="campaignCreator step1">
+				<header>
+					<h2>Step 3. Craft Your Message</h2>
+					<button type="button" class="right">Save &amp; Close</button>
+				</header>
+
+
+				<div class="fieldRow">
+					<div class="grid 2of3">
+						<label class="req">First introductory message</label>
+						<textarea name="description" class="short" placeholder="Hello, this is Eugene McCarthy at Area 51. I have a few questions about some aliens you definitely did not see."></textarea>
+						<span class="inputMsg charCount"><b>26</b> characters remaining</span>
+					</div>
+					<div class="grid 1of3 centerCaption">
+						<p class="caption">This is the first thing people will see. Introduce yourself!</p>
+					</div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 2of3">
+						<label class="req">Second introductory message</label>
+						<textarea name="description" class="short" placeholder="Your feedback is greatly appreciated and definitely won't be used to place you on an NSA watch list."></textarea>
+						<span class="inputMsg charCount"><b>26</b> characters remaining</span>
+					</div>
+					<div class="grid 1of3 centerCaption">
+						<p class="caption">Now that you've introduced yourself, tell them how their feedback will be used and why it's important.</p>
+					</div>
+				</div>
+
+				<div class="fieldRow">
+					<div class="grid 2of3">
+						<label class="req">Briefly describe/summarize what your questions are about</label>
+						<textarea name="description" class="short" placeholder="Required"></textarea>
+						<span class="inputMsg charCount"><b>26</b> characters remaining</span>
+					</div>
+					<div class="grid 1of3 centerCaption">
+						<p class="caption">Morbi egestas urna non consequat tempus, nunc arcu mollis.</p>
+					</div>
+				</div>
+
+				<div class="grid 2of3 "><div class="hr"></div></div>
+
+				<div class="fieldRow">
+					<div class="grid 2of3">
+						<label class="important req">Your Questions</label>
+						<a href="#" id="qBuilderBtnAdd" class="button smaller green right">Add Question</a>
+
+						<ul id="qBuilder" class="questionBuilder">
+							<!--
+							<li class="question">
+								<textarea class="questionText">What is your address or nearest intersection?</textarea>
+								<div class="options">
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Answer type</label></div>
+										<div class="grid 3of4">
+											<select>
+												<option selected="selected" data-caption="Source writes their own response">Text</option>
+												<option data-caption="Source chooses one of your answers">Pick one</option>
+												<option data-caption="Source chooses any/all of your fixed answers">Pick multiple</option>
+												<option data-caption="Prompt a simple 'yes' or 'no'">Yes / No</option>
+												<option data-caption="Prompt a simple 'true' or 'false'">True / False</option>
+											</select>
+										</div>
+									</div>
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Tag this question</label></div>
+										<div class="grid 3of4"><input type="text" placeholder="Optional" /></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="question">
+								<textarea class="questionText">On a scale of 0-9, please rate the amount of flood damage you incurred, with zero meaning no damage and 9 meaning severe damage.</textarea>
+								<div class="options">
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Answer type</label></div>
+										<div class="grid 3of4">
+											<select>
+												<option selected="selected" data-caption="Source writes their own response">Text</option>
+												<option data-caption="Source chooses one of your answers">Pick one</option>
+												<option data-caption="Source chooses any/all of your answers">Pick multiple</option>
+												<option data-caption="Prompt a simple 'yes' or 'no'">Yes / No</option>
+												<option data-caption="Prompt a simple 'true' or 'false'">True / False</option>
+											</select>
+										</div>
+									</div>
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Tag this question</label></div>
+										<div class="grid 3of4"><input type="text" placeholder="Optional" /></div>
+									</div>
+								</div>
+							</li>
+
+							<li class="question">
+								<textarea class="questionText">Is there anything else you'd like to add?</textarea>
+								<div class="options">
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Answer type</label></div>
+										<div class="grid 3of4">
+											<select>
+												<option selected="selected" data-caption="Source writes their own response">Text</option>
+												<option data-caption="Source chooses one of your answers">Pick one</option>
+												<option data-caption="Source chooses any/all of your fixed answers">Pick multiple</option>
+												<option data-caption="Prompt a simple 'yes' or 'no'">Yes / No</option>
+												<option data-caption="Prompt a simple 'true' or 'false'">True / False</option>
+											</select>
+										</div>
+									</div>
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Tag this question</label></div>
+										<div class="grid 3of4"><input type="text" placeholder="Optional" /></div>
+									</div>
+								</div>
+							</li>
+							-->
+							
+
+							<li class="question template">
+								<textarea name="question[]" class="questionText" placeholder="Type your question here"></textarea>
+								<button class="btnRemove" title="Remove">&#xe001;</button>
+								<!--<div class="auxBtns">
+									<button class="btnSearch">Find a previous question</button>
+								</div>-->
+								<div class="options">
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Answer type</label></div>
+										<div class="grid 3of4">
+											<select name="questionOptionAnswerType[]" class="notFancy">
+												<option selected="selected" data-caption="Source writes their own response">Text</option>
+												<option data-caption="Source chooses one of your answers">Pick one</option>
+												<option data-caption="Source chooses any/all of your fixed answers">Pick multiple</option>
+												<option data-caption="Prompt a simple 'yes' or 'no'">Yes / No</option>
+												<option data-caption="Prompt a simple 'true' or 'false'">True / False</option>
+											</select>
+										</div>
+									</div>
+									<div class="fieldRow">
+										<div class="grid 1of4"><label>Tag this question</label></div>
+										<div class="grid 3of4"><ul class="questionTags"></ul></div>
+										<!--<div class="grid 3of4"><input name="questionOptionTags[]" class="questionTags" type="text" placeholder="Optional" /></div>-->
+									</div>
+								</div>
+							</li>
+
+						</ul>
+
+					</div>
+					<div class="grid 1of3 centerCaption">
+						<p class="caption">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum donec id elit non mi porta gravida at eget metus.</p>
+					</div>
+				</div>
+
+				<div class="grid 2of3 "><div class="hr"></div></div>
+
+				<div class="fieldRow">
+					<div class="grid 2of3">
+						<label class="req">Write a parting "Thank You" note</label>
+						<textarea name="description" class="short" placeholder="Required"></textarea>
+						<span class="inputMsg charCount"><b>26</b> characters remaining</span>
+					</div>
+					<div class="grid 1of3 centerCaption">
+						<p class="caption">Morbi egestas urna non consequat tempus, nunc arcu mollis.</p>
+					</div>
+				</div>
+
+
+				<footer>
+					<a href="index.html" class="unimportant">Previous step</a>
+					<a href="index.html" class="button blue right">Next step</a>
+					<!--<button type="button" class="blue">Looks good! Next step</button>-->
+				</footer>
+			</form>
+		</section>
+
+		<section class="footerHolder">
+			<footer>
+			</footer>
+		</section>
+	</body>
+</html>
