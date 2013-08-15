@@ -33,7 +33,7 @@
 					<li><a href="#">Dashboard</a></li>
 					<li><a href="#" class="active">Campaigns</a></li>
 					<li><a href="#">People</a></li>
-					<li><a href="#">Settings</a></li>
+					<li class="settings"><a href="#">settings</a></li>
 				</ul>
 			</header>
 		</section>
@@ -42,10 +42,10 @@
 			<div class="mainTop breadcrumb">
 				<h2>Minneapolis Storm Damage</h2>
 				<ol class="crumbs">
-					<li><a href="#">Basic info</a></li>
-					<li><a href="#" class="active">Build your list</a></li>
-					<li><a href="#">Craft your message</a></li>
-					<li><a href="#">Review</a></li>
+					<li><a>Basic info</a></li>
+					<li><a class="active">Build your list</a></li>
+					<li><a>Craft your message</a></li>
+					<li><a>Review</a></li>
 				</ol>
 			</div>
 
@@ -55,7 +55,151 @@
 					<button type="button" class="right">Save &amp; Close</button>
 				</header>
 
-				<div class="grid 1of1 "><div class="hr"></div></div>
+				<!--<div class="grid 1of1 "><div class="hr"></div></div>-->
+
+
+				<div class="fieldRow">
+					<div class="grid 1of4">
+
+						<label class="important noPad">Filters</label>
+						<button id="filterBtnAdd" class="smaller green right iconAdd">Add a filter</button>
+						<p class="caption filterCaption">Use filters to narrow down the list of people on the right. Adding and removing filters will not modify people you’ve already selected.</p>
+
+						<div class="hr noMarg"></div>
+
+						<ul class="filterList">
+							<li class="filter">
+								<h6>Tags</h6>
+								<ul class="taglist">
+									<li>Reliable</li>
+									<li>Insightful</li>
+								</ul>
+							</li>
+						</ul>
+
+					</div>
+					<div class="grid 3of4 extra-padding-left">
+
+						<div class="tabletop">
+							<button class="smaller green iconCheck">Select all displayed</button> 
+							<!--<span><b>16 people</b> are listed, <b>7</b> of them are selected.</span>-->
+						</div>
+
+						<table class="sourceList">
+							<thead>
+								<tr>
+									<td>&#x2713;</td>
+									<td>Name</td>
+									<td>Location</td>
+									<td>Profession</td>
+									<td>Interests</td>
+								</tr>
+							</thead>
+
+							<tbody>
+
+								<tr>
+									<td><input type="checkbox" id="check1" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://brockpetrie.com/images/profile.jpg" border="0" /></div>
+										<span class="sourceName">Brock P.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check2" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/ZanderSays_128.jpg" border="0" /></div>
+										<span class="sourceName">Jason A.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check3" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/alagoon_128.jpg" border="0" /></div>
+										<span class="sourceName">Alex Z.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check4" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/cameronmoll_128.jpg" border="0" /></div>
+										<span class="sourceName">Cameron M.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check5" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/sajtoo_128.jpg" border="0" /></div>
+										<span class="sourceName">Jason A.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check6" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/leevigraham_128.jpg" border="0" /></div>
+										<span class="sourceName">Alex Z.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+								<tr>
+									<td><input type="checkbox" id="check7" /></td>
+									<td>
+										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/walterstephanie_128.jpg" border="0" /></div>
+										<span class="sourceName">Cameron M.</span><br />
+										<span class="sourceBio">28-year-old male</span>
+									</td>
+									<td>CARAG <br />Minneapolis, MN</td>
+									<td>Interactive director</td>
+									<td>Camping, foreign policy, geopolitics, technology</td>
+								</tr>
+
+							</tbody>
+
+							<!--
+							<tfoot>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tfoot>
+							-->
+						</table>
+
+					</div>
+				</div>
+
 
 				<footer>
 					<a href="index.html" class="unimportant">Previous step</a>

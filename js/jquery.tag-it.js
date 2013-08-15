@@ -198,6 +198,8 @@
                     }
                 });
 
+            this.tagInput.autoGrowInput();
+
             // Single field support.
             var addedExistingFromSingleFieldNode = false;
             if (this.options.singleField) {

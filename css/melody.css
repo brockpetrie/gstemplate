@@ -67,6 +67,13 @@
     padding: 0;
   }
 
+  .grid.extra-padding-right {
+    padding-right: 30px;
+  }
+  .grid.extra-padding-left {
+    padding-left: 30px;
+  }
+
   .subgrid { white-space: nowrap; letter-spacing: -0.3em; padding: 0; }
 
 
