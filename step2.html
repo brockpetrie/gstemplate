@@ -68,6 +68,39 @@
 						<div class="hr noMarg"></div>
 
 						<ul class="filterList">
+
+							<li class="filter">
+								<h6>Age</h6>
+								<div id="agerange"></div>
+								<script>
+									$(function() {
+										$('#agerange').slider({
+											range: true,
+											min: 0,
+											max: 101,
+											values: [ 21, 55 ],
+											slide: function( event, ui ) {
+												/*$( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );*/
+											}
+										});
+									});
+								</script>
+							</li>
+
+							<li class="filter filter-sex">
+								<h6>Sex</h6>
+								<div class="fieldRow">
+									<div class="grid 1of2">
+										<input type="checkbox" class="toggle bigger" id="filtermale" checked="checked" /><br />
+										Male
+									</div>
+									<div class="grid 1of2">
+										<input type="checkbox" class="toggle bigger" id="filterfemale" checked="checked" /><br />
+										Female
+									</div>
+								</div>
+							</li>
+
 							<li class="filter">
 								<h6>Tags</h6>
 								<ul class="taglist">
@@ -75,14 +108,15 @@
 									<li>Insightful</li>
 								</ul>
 							</li>
+
 						</ul>
 
 					</div>
 					<div class="grid 3of4 extra-padding-left">
 
-						<div class="tabletop">
+						<div class="sourceListTop">
 							<button class="smaller green iconCheck">Select all displayed</button> 
-							<!--<span><b>16 people</b> are listed, <b>7</b> of them are selected.</span>-->
+							<span><b>7 people</b> are listed, <b>3</b> of them are selected.</span>
 						</div>
 
 						<table class="sourceList">
@@ -99,7 +133,7 @@
 							<tbody>
 
 								<tr>
-									<td><input type="checkbox" id="check1" /></td>
+									<td><input type="checkbox" id="check1" checked="checked" /></td>
 									<td>
 										<div class="sourceAvatar"><img src="http://brockpetrie.com/images/profile.jpg" border="0" /></div>
 										<span class="sourceName">Brock P.</span><br />
@@ -123,7 +157,7 @@
 								</tr>
 
 								<tr>
-									<td><input type="checkbox" id="check3" /></td>
+									<td><input type="checkbox" id="check3" checked="checked" /></td>
 									<td>
 										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/alagoon_128.jpg" border="0" /></div>
 										<span class="sourceName">Alex Z.</span><br />
@@ -135,7 +169,7 @@
 								</tr>
 
 								<tr>
-									<td><input type="checkbox" id="check4" /></td>
+									<td><input type="checkbox" id="check4" checked="checked" /></td>
 									<td>
 										<div class="sourceAvatar"><img src="http://uifaces.com/faces/_twitter/cameronmoll_128.jpg" border="0" /></div>
 										<span class="sourceName">Cameron M.</span><br />

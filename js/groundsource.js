@@ -105,7 +105,8 @@ $(document).ready(function() {
 
 	$('input[type="checkbox"]').each(function() {
 		var classy = $(this).hasClass('toggle') ? 'toggle' : 'checkbox';
-		$(this).removeClass();
+		if ($(this).hasClass('bigger')) classy += ' bigger';
+		$(this).removeClass('toggle checkbox bigger');
 
 		var id = $(this).attr('id');
 		var parent = $(this).wrap('<div class="'+ classy +'" />').parent();
