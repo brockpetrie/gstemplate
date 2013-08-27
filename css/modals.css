@@ -1,0 +1,119 @@
+/* This styling is just for the demo (CSS-only modals); N/A if we are using JS to invoke our modals. */
+.modal {
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.33s all;
+	-webkit-transition: 0.33s all;
+	}
+.modal:target {
+	opacity: 1;
+	pointer-events: auto;
+	}
+/*   ^   ^   ^   ^   ^   ^   ^   ^   ^   */
+
+
+.modal {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(230, 230, 230, 0.85);
+	font-size: 90%;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	text-align: center;
+	}
+.modalForm {
+	width: 50%;
+	background: #fff;
+	padding: 35px 40px;
+	border-radius: 2px;
+	box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05), 0 20px 50px rgba(50, 50, 50, 0.1), 0 1px 2px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(51, 187, 173, 0.5), inset 0 1px 4px rgba(0, 0, 0, 0.05), 0 0 5px rgba(51, 187, 173, 0.33);
+	line-height: 1.33em;
+	text-align: left;
+	margin: 1em auto;
+	position: relative;
+	}
+
+.modalForm header .close {
+	display: inline-block;
+	position: relative;
+	font-family: 'groundsymbols';
+	float: right;
+	color: #909fa6;
+	opacity: 0.5;
+	transition: 0.25s all;
+	-webkit-transition: 0.25s all;
+	font-size: 95%;
+	}
+	.modalForm header .close:before {
+		font-family: 'proxima-nova';
+		content: 'cancel';
+		text-transform: uppercase;
+		font-size: 70%;
+		font-weight: 600;
+		letter-spacing: 0.5px;
+		display: inline-block;
+		top: 5%;
+		right: 135%;
+		position: absolute;
+		pointer-events: none;
+		opacity: 0;
+		transition: 0.25s all;
+			-webkit-transition: 0.25s all;
+		transition-delay: 0s;
+			-webkit-transition-delay: 0s;
+		transform: translateZ(0);
+			-webkit-transform: translateZ(0);
+			-moz-transform: translateZ(0);
+			-ms-transform: translateZ(0);
+		-webkit-perspective: 1000;
+		transform-origin: 115% 50%;	
+			-webkit-transform-origin: 115% 50%;
+			-moz-transform-origin: 115% 50%;
+			-ms-transform-origin: 115% 50%;
+		transform: perspective(800) rotateY(-90deg) scale(1) translateY(0px);
+			-webkit-transform: perspective(800) rotateY(-90deg) scale(1) translateY(0px);
+			-moz-transform: perspective(800) rotateY(-90deg) scale(1) translateY(0px);
+			-ms-transform: perspective(800) rotateY(-90deg) scale(1) translateY(0px);
+		}
+	.modalForm header .close:hover {
+		color: #ee5159;
+		opacity: 1;
+		}
+	.modalForm header .close:hover:before {
+		color: #ee5159;
+		opacity: 1;
+		transform: perspective(800) rotateY(0deg) scale(1) translateY(0px);
+			-webkit-transform: perspective(800) rotateY(0deg) scale(1) translateY(0px);
+			-moz-transform: perspective(800) rotateY(0deg) scale(1) translateY(0px);
+			-ms-transform: perspective(800) rotateY(0deg) scale(1) translateY(0px);
+		}
+
+.modalForm header h2 {
+	font-size: 175%;
+	color: #33bbad;
+	font-family: 'brandon-grotesque';
+	font-weight: 300;
+	letter-spacing: 0px;
+	margin-bottom: 0.6em;
+	}
+
+.modalForm .fieldRow { margin: 0 -7px; }
+.modalForm .fieldRow .grid { padding: 0 7px; }
+
+.modalForm label { font-size: 95%; }
+.modalForm textarea { height: auto; margin-bottom: -0.4em; }
+
+.modalForm p, .modalForm .fieldRow  { margin-bottom: 0.6em; }
+.modalForm p + p, .modalForm .fieldRow + .fieldRow  { margin-top: 0.6em; }
+
+.modalForm footer { margin-top: 1em; display: inline-block; text-align: right; }
+
+.modalForm label + input,
+.modalForm label + textarea,
+.modalForm .caption + input,
+.modalForm .caption + textarea { margin-top: 0.33em; }
+.modalForm label + select + .dropdown { margin-top: 0.33em; }
+.modalForm .caption + select + .dropdown { margin-top: 0.66em; }
+
+.modalForm .caption { margin-top: 0; font-size: 70%; }

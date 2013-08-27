@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<title>GroundSource</title>
+		<link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/melody.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.tag-it.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/forms.css" />
+		<link rel="stylesheet" type="text/css" href="css/modals.css" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+		<script type="text/javascript" src='js/jquery-ui-1.10.3.custom.min.js'></script>
+		<script type="text/javascript" src='js/jquery.tag-it.js'></script>
+		<script type="text/javascript" src='js/jquery.autosize.min.js'></script>
+		<script type="text/javascript" src="js/groundsource.js"></script>
+		<script type="text/javascript" src="//use.typekit.net/vgi4bct.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<script>
+			$(function(){
+				$('.taglist').tagit({ placeholderText: 'Optional' });
+				$('textarea:not(.questionText):not(.fixie)').autosize({append: '\n'});
+			});
+		</script>
+	</head>
+
+	<body>
+		<section class="headerHolder">
+			<header>
+				<h1>GroundSource</h1>
+				<h4>Eugene McCarthy <a href="#">Log out</a></h4>
+				<ul class="nav">
+					<li><a href="#" class="active">Dashboard</a></li>
+					<li><a href="#">Campaigns</a></li>
+					<li><a href="#">People</a></li>
+					<li class="settings"><a href="#">settings</a></li>
+				</ul>
+			</header>
+		</section>
+
+		<section class="main">
+			<div class="mainTop">
+				<h2>Modals</h2>
+			</div>
+
+			<div class="fieldRow">
+				<div class="grid 1of3">
+					<p>Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+					<a href="#createcampaign" class="button blue centered">Create a new campaign</a>
+				</div>
+
+				<div class="grid 1of3">
+					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<a href="#addsource" class="button green">Add a new source</a>
+				</div>
+
+				<div class="grid 1of3">
+					<p>Etiam porta sem malesuada magna mollis euismod. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla.</p>
+					<!--<a href="#createcampaign" class="button purple">Add a new source</a>-->
+				</div>
+			</div>
+
+		</section>
+
+		<section class="footerHolder">
+			<footer>
+			</footer>
+		</section>
+
+
+		<div class="modal" id="createcampaign">
+			<div class="modalForm">
+				<header>
+					<h2>Create a new campaign</h2>
+					<a href="#" class="close">x</a>
+				</header>
+
+				<form action="/campaigns/create/ajax/" method="POST">
+					<p>
+						<label for="campname" class="req">Name your campaign</label>
+						<input id="campname" type="text" name="description" placeholder="Required" />
+					</p>
+					<p>
+						<label for="campdesc">Description</label>
+						<textarea id="campdesc" placeholder="Optional" class="fixie"></textarea>
+					</p>
+					<p>
+						<label for="campgroup">Group</label>
+						<i class="caption">Optional. If you don't choose a group, this campaign will be assigned to your account.</i>
+						<select name="campgroup" id="campgroup">
+							<option selected="selected">None</option>
+							<option>Minnesota Public Radio</option>
+							<option>mWater</option>
+						</select>
+					</p>
+
+					<footer>
+						<button type="submit" class="green iconCheck">Create Campaign</button>
+					</footer>
+				</form>
+			</div>
+		</div>
+
+		<div class="modal" id="addsource">
+			<div class="modalForm">
+				<header>
+					<h2>Add a source</h2>
+					<a href="#" class="close">x</a>
+				</header>
+
+				<form action="/campaigns/create/ajax/" method="POST">
+
+					<div class="fieldRow">
+						<div class="grid 1of2">
+							<label for="sourcefirst" class="req">First name</label>
+							<input id="sourcefirst" type="text" name="sourcefirst" placeholder="Required" />
+						</div>
+
+						<div class="grid 1of2">
+							<label for="sourcelast" class="req">Last name</label>
+							<input id="sourcelast" type="text" name="sourcelast" placeholder="Required" />
+						</div>
+					</div>
+
+					<div class="fieldRow">
+						<div class="grid 1of3">
+							<label for="id_region" class="req">Region</label>
+							<select name="id_region" id="id_region">
+								<option value="ZA">South Africa</option>
+								<option value="TZ">Tanzania</option>
+								<option value="US" selected="selected">United States</option>
+							</select>	
+						</div>
+
+						<div class="grid 1of3">
+							<label for="sourcezip">ZIP code</label>
+							<input id="sourcezip" type="text" name="sourcezip" placeholder="Optional" />
+						</div>
+
+						<div class="grid 1of3">
+							<label for="sourcephone">Phone number</label>
+							<input id="sourcephone" type="text" name="sourcephone" placeholder="Optional" />
+							<!--<i class="caption">Your phone number must be prefixed with country code but without the '+' sign. For e.g, in the USA, the number could be, 15677654321, with '1' for the country code.</i>-->
+						</div>
+					</div>
+
+					<!--<div class="fieldRow">
+						<div class="grid 1of3">
+							<label for="sourcebirthyear">Year of birth</label>
+							<input id="sourcebirthyear" type="text" name="sourcebirthyear" placeholder="e.g. 1974" />
+						</div>
+
+						<div class="grid 2of3">
+							<label for="sourcelast">Sex</label>
+							<div class="radioholder">
+								<input type="radio" name="sourcesex" id="sourcesexmale" /><label for="sourcesexmale">Male</label>
+								<input type="radio" name="sourcesex" id="sourcesexfemale" /><label for="sourcesexfemale">Female</label>
+							</div>
+						</div>
+					</div>-->
+
+					<footer>
+						<button type="submit" class="green iconCheck">Add Source</button>
+					</footer>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>
