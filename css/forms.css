@@ -421,3 +421,92 @@ ul.tagit li.tagit-choice .tagit-close {
 	margin-left: -7px;
 	}
 
+
+
+/*   *   *   Question Builder   *   *   */
+
+.questionBuilder {
+	position: relative;
+	left: -1px;
+	right: -1px;
+	background: rgba(225, 230, 233, 0.5);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04), inset 0 1px 4px rgba(0, 0, 0, 0.04);
+	border-radius: 2px;
+	min-height: 2em;
+	padding: 10px 20px;
+	margin-top: 15px;
+	}
+.questionBuilder > .question {
+	background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAK0lEQVQYV2NkYGAwBmKCgJEUhQRNAykAmUgUIMlqoj1DtNVEKyTaaqIUAgATOwE9HiU0XAAAAABJRU5ErkJggg==) no-repeat 10px 13px;
+	padding: 0 30px;
+	box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.02), 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.04);
+	cursor: pointer;
+	line-height: 0em;
+	margin: 10px 0;
+	position: relative;
+	border-radius: 2px;
+	}
+.questionBuilder > .question.focused { box-shadow: 0 2px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(51, 187, 173, 0.55), 0 0 6px rgba(51, 187, 173, 0.44); }
+
+.questionBuilder > .question > .questionText {
+	box-shadow: none;
+	background: none;
+	padding: 8px 0 7px;
+	line-height: 1.33em;
+	opacity: 0.66;
+	resize: none;
+	height: 1em;
+	transition: none;
+	}
+	.questionBuilder > .question > input.questionText:focus { box-shadow: none; }
+	.questionBuilder > .question.focused > .questionText { opacity: 1; }
+
+.questionBuilder > .question .btnSearch {
+	font-size: 13px;
+	background: none;
+	box-shadow: none;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	color: #bbb;
+	padding: 4px 8px 4px;
+	position: absolute;
+	right: 10px;
+	top: 4px;
+	outline: none;
+	font-family: 'proxima-nova';
+	letter-spacing: 0;
+	font-weight: 500;
+	border-radius: 2px;
+	}
+.questionBuilder > .question .btnRemove {
+	font-size: 12px;
+	background: none;
+	box-shadow: none;
+	position: absolute;
+	right: 3px; top: 2px;
+	padding: 7px 8px 7px;
+	color: #ddd;
+	font-family: 'groundsymbols';
+	outline: none;
+	opacity: 0;
+	pointer-events: none;
+	}
+	.questionBuilder > .question .btnRemove:hover { color: #ee5159; }
+.questionBuilder > .question.focused .btnRemove { opacity: 1; pointer-events: auto; }
+
+.questionBuilder > .question > .options {
+	display: none;
+	background: rgba(225, 230, 233, 0.2);
+	margin: 0 -30px;
+	padding: 20px 10px 10px;
+	cursor: default;
+	font-size: 80%;
+	line-height: 0.66em;
+	box-shadow: inset 0 1px 3px rgba(51, 187, 173, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(0, 0, 0, 0.02), 0 -2px 0 rgba(0, 0, 0, 0.02);
+	/*transition: 0.25s all;
+	height: 1px;*/
+	}
+	/*.questionBuilder > .question.focused > .options { display: block; }*/
+.questionBuilder > .question > .options .fieldRow { margin: 0 0 10px; }
+.questionBuilder > .question > .options input, .questionBuilder > .question > .options .tagit { background: #fff; }
+.questionBuilder > .question > .options .dropdown { font-size: 105%; }
+.questionBuilder > .question > .options .dropdown > .options > li { font-size: 100%; }
