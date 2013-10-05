@@ -447,6 +447,7 @@ section.main {
 .campaignCreator header button, .campaignCreator header a.button,
 .campaignCreator footer button, .campaignCreator footer a.button {
 	top: -0.66em;
+	margin-left: 10px;
 	}
 
 .campaignCreator footer {
